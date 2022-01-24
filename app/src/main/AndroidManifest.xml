@@ -8,19 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_todolauncher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TodoApp">
-        <activity
-            android:name=".SplashScreen"
-            android:theme="@style/SplashTheme"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        android:theme="@style/Theme.AppCompat">
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
