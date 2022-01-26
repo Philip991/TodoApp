@@ -37,13 +37,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         arrayList= new ArrayList<String>();
+        itemReader();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
                 arrayList);
         listView.setAdapter(adapter);
         onBtnClick();
         onListClick();
+
         listViewListener();
-        itemReader();
+
 
 
     }
@@ -87,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             File filesDir = getFilesDir() ;
             File todoFile = new File(filesDir, "todo.txt");
             try {
-                arrayList=new ArrayList<String>(FileUtils.readLines(todoFile));
+                arrayList = new ArrayList<String>(FileUtils.readLines(todoFile));
             }catch (IOException e){
                     arrayList=new ArrayList<String>();
                 }
