@@ -24,7 +24,7 @@
         android:id="@+id/inputItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter here"
+        android:hint="New ToDo"
         android:layout_alignTop="@+id/addBtnItem"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -35,7 +35,7 @@
         android:id="@+id/addBtnItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add to your list"
+        android:text="Add"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
