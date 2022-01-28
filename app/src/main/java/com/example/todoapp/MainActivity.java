@@ -1,15 +1,21 @@
 package com.example.todoapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+
 
 import org.apache.commons.io.FileUtils;
 
@@ -24,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     Button btn;
     ArrayList<String>arrayList;
     ArrayAdapter<String> adapter;
+    ImageView backIcon;
+    ImageView doneIcon;
+    TextView toolBarTitle;
+
+
 
 
     @Override
@@ -35,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
         edTxt=(EditText) findViewById(R.id.inputItem);
         btn =(Button) findViewById(R.id.addBtnItem);
 
+        backIcon=(ImageView)findViewById(R.id.back_icon);
+        toolBarTitle=(TextView)findViewById(R.id.toolbar_title);
+        doneIcon =(ImageView)findViewById(R.id.done_icon);
+
+        getSupportActionBar().hide();
+
+
+
+
 
         arrayList= new ArrayList<String>();
         itemReader();
@@ -44,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         onBtnClick();
         onListClick();
         listViewListener();
+        onDoneBtnClick();
+        onBackBtnClick();
+
+        toolBarTitle.setText("Current ToDo");
 
 
 
@@ -102,6 +126,24 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    public void onBackBtnClick(){
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+    }
+    public void onDoneBtnClick(){
+        doneIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ListItem.class));
+            }
+        });
+    }
+
 
 
 

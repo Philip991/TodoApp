@@ -8,14 +8,19 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <include
+        layout="@layout/appbar">
+
+    </include>
+
     <ListView
         android:id="@+id/lstVw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/addBtnItem"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/addBtnItem" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
 
 
     <EditText
