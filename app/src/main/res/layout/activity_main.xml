@@ -8,37 +8,31 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include
-        layout="@layout/appbar">
-
-    </include>
 
     <ListView
         android:id="@+id/lstVw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/addBtnItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"/>
-
+        android:layout_alignParentTop="true"
+        android:choiceMode="multipleChoice" />
 
     <EditText
         android:id="@+id/inputItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="New ToDo"
-        android:layout_alignTop="@+id/addBtnItem"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"/>
 
 
-    <Button
-        android:id="@+id/addBtnItem"
+    <ImageView
+        android:id="@+id/addBtnIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:src="@drawable/ic_baseline_add_24"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodoApp">
         <activity
-            android:name=".ListItem"
+            android:name=".Completed"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

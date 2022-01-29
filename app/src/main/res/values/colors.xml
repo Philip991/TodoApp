@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dim_brown">#3E302C</color>
+    <color name="launcher_bg_color">#A9A8A8</color>
 </resources>
